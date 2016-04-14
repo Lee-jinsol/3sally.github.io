@@ -1,40 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>실습</title>
+    <title>Exercise 2</title>
+
+    <script>
+        var obj_list = [
+            {firstName: 'fitstName', lastName: 'lastName'},
+            {firstName: '스티브', lastName: '잡스'},
+            {firstName: '빌', lastName: '게이츠'},
+            {firstName: '마크', lastName: '저커버그'},
+            {firstName: '앨런', lastName: '머스크'}
+        ];
+        var html = "<table border='1'>";
+        for (var i = 0; i < obj_list.length; i++) {
+            html += "<tr>" + "<td>"+ obj_list[i].firstName + "</td>" + "<td>"+ obj_list[i].lastName +"</td>"+"</tr>";
+        }
+        html += "</table>";
+    </script>
+
+    <style>
+        table {
+            border-style : double;
+        }
+    </style>
+
 </head>
 <body>
-<h1><b>유명한 CEO</b></h1>
+<h1>유명한 CEO</h1>
+<div id="ceo_list"></div>
 
-<table border="1">
-    <thead>
-    <tr>
-        <th><b>First Name</b></th>
-        <th><b>Last Name</b></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>스티브</td>
-        <td>잡스</td>
-    </tr>
-    <tr>
-        <td>빌</td>
-        <td>게이츠</td>
-    </tr>
-    <tr>
-        <td>마크</td>
-        <td>저커버그</td>
-    </tr>
-    <tr>
-        <td>앨런</td>
-        <td>머스크</td>
-    </tr>
-    </tbody>
-
-
-</table>
+<script>
+    document.getElementById("ceo_list").innerHTML = html;
+</script>
 
 </body>
 </html>
